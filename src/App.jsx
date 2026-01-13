@@ -1,4 +1,5 @@
-import "./App.css";
+import Game from "./components/Game";
+import "./styles/app.css";
 
 export default function App() {
   return (
@@ -8,7 +9,7 @@ export default function App() {
       </header>
 
       <main className="main">
-        <div className="placeholder">Loading…</div>
+        <Game />
       </main>
     </div>
   );
