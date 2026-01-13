@@ -28,3 +28,43 @@
   width: 30px;
   height: 30px;
 }
+.endState {
+  display: grid;
+  gap: 10px;
+}
+
+.endRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.resultPill {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  background: rgba(17, 24, 39, 0.04);
+  font-size: 13px;
+}
+
+.restartBtn {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 12px;
+  background: #111827;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+
+.restartBtn:hover {
+  transform: translateY(-1px);
+}
+
+.restartBtn:active {
+  transform: translateY(0px);
+  opacity: 0.92;
+}
+

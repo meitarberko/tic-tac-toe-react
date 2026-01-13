@@ -32,15 +32,41 @@ export default function Game() {
     setNext(next === "X" ? "O" : "X");
   };
 
+  const handleRestart = () => {
+    setCells(EMPTY);
+    setNext("X");
+  };
+
   const currentAsset = getMarkAsset(next);
+  const winnerAsset = outcome.winner ? getMarkAsset(outcome.winner) : null;
 
   return (
     <section className="game">
       <div className="statusCard" aria-live="polite">
-        <div className="statusRow">
-          <span className="label">Next</span>
-          <img className="statusIcon" src={currentAsset.src} alt="Next mark" />
-        </div>
+        {!isLocked ? (
+          <div className="statusRow">
+            <span className="label">Next</span>
+            <img className="statusIcon" src={currentAsset.src} alt="Next mark" />
+          </div>
+        ) : (
+          <div className="endState">
+            {outcome.winner ? (
+              <div className="endRow">
+                <span className="label">Winner</span>
+                <img className="statusIcon" src={winnerAsset.src} alt="Winner mark" />
+              </div>
+            ) : (
+              <div className="endRow">
+                <span className="label">Result</span>
+                <span className="resultPill">Draw</span>
+              </div>
+            )}
+
+            <button className="restartBtn" type="button" onClick={handleRestart}>
+              Play again
+            </button>
+          </div>
+        )}
       </div>
 
       <Board cells={cells} onPlay={handlePlay} isLocked={isLocked} getMarkAsset={getMarkAsset} />
