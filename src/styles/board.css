@@ -1,0 +1,39 @@
+.board {
+  width: min(340px, 92vw);
+  aspect-ratio: 1 / 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 12px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+}
+
+.square {
+  border: 2px solid rgba(17, 24, 39, 0.10);
+  background: #ffffff;
+  border-radius: 14px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: transform 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.square:hover:not(:disabled) {
+  transform: translateY(-1px);
+  border-color: rgba(17, 24, 39, 0.20);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.square:disabled {
+  cursor: not-allowed;
+  opacity: 0.92;
+}
+
+.mark {
+  width: 62%;
+  height: 62%;
+  user-select: none;
+  pointer-events: none;
+}
