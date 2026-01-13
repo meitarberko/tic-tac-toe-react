@@ -1,0 +1,32 @@
+.app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background:
+    radial-gradient(800px 400px at 20% 0%, rgba(37, 99, 235, 0.10), transparent 60%),
+    radial-gradient(800px 400px at 80% 0%, rgba(225, 29, 72, 0.10), transparent 60%),
+    #f6f7fb;
+  color: #111827;
+}
+
+.topbar {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(10px);
+}
+
+.title {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+}
+
+.main {
+  display: grid;
+  place-items: center;
+  padding: 24px 16px 34px;
+}
