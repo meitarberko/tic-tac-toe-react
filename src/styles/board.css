@@ -4,16 +4,19 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  padding: 12px;
+  padding: 14px;
   background: white;
-  border-radius: 16px;
-  box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
 .square {
-  border: 2px solid rgba(17, 24, 39, 0.10);
-  background: #ffffff;
-  border-radius: 14px;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  border: 2px solid #e5e7eb;
+  background: #fff;
+  border-radius: 18px;
   cursor: pointer;
   display: grid;
   place-items: center;
@@ -21,25 +24,26 @@
 }
 
 .square:hover:not(:disabled) {
+  border-color: #f9c5d1;
+  box-shadow: 0 6px 16px rgba(249, 197, 209, 0.35);
   transform: translateY(-1px);
-  border-color: rgba(17, 24, 39, 0.20);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
 .square:disabled {
   cursor: not-allowed;
-  opacity: 0.92;
-}
-
-.mark {
-  width: 62%;
-  height: 62%;
-  user-select: none;
-  pointer-events: none;
+  opacity: 0.95;
 }
 
 .square:focus-visible {
-  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline: 3px solid #f9c5d1;
   outline-offset: 2px;
 }
 
+.mark {
+  max-width: 65%;
+  max-height: 65%;
+  width: auto;
+  height: auto;
+  user-select: none;
+  pointer-events: none;
+}
