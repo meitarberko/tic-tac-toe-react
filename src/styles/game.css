@@ -1,0 +1,30 @@
+.game {
+  display: grid;
+  gap: 14px;
+  justify-items: center;
+}
+
+.statusCard {
+  width: min(340px, 92vw);
+  background: white;
+  border-radius: 16px;
+  padding: 12px 14px;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+}
+
+.statusRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label {
+  font-size: 14px;
+  color: rgba(17, 24, 39, 0.75);
+}
+
+.statusIcon {
+  width: 30px;
+  height: 30px;
+}
