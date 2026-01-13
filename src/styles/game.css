@@ -1,70 +1,68 @@
 .game {
   display: grid;
-  gap: 14px;
+  gap: 16px;
   justify-items: center;
 }
 
 .statusCard {
   width: min(340px, 92vw);
   background: white;
-  border-radius: 16px;
-  padding: 12px 14px;
-  border: 1px solid rgba(17, 24, 39, 0.08);
+  border-radius: 20px;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
   box-shadow: 0 10px 26px rgba(0,0,0,0.06);
 }
 
-.statusRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.label {
-  font-size: 14px;
-  color: rgba(17, 24, 39, 0.75);
-}
-
-.statusIcon {
-  width: 30px;
-  height: 30px;
-}
-.endState {
-  display: grid;
-  gap: 10px;
-}
-
+.statusRow,
 .endRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+.label {
+  font-size: 15px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.statusIcon {
+  width: 32px;
+  height: 32px;
+}
+
+.endState {
+  display: grid;
+  gap: 12px;
+}
+
 .resultPill {
-  padding: 6px 10px;
+  padding: 6px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(17, 24, 39, 0.12);
-  background: rgba(17, 24, 39, 0.04);
+  border: 1px solid #f9c5d1;
+  background: #fde2e8;
   font-size: 13px;
+  color: #6b7280;
 }
 
 .restartBtn {
   width: 100%;
-  padding: 10px 12px;
+  padding: 12px;
   border: none;
-  border-radius: 12px;
-  background: #111827;
-  color: white;
-  font-weight: 600;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f9c5d1, #fde2e8);
+  color: #111827;
+  font-weight: 700;
   cursor: pointer;
   transition: transform 120ms ease, opacity 120ms ease;
 }
 
 .restartBtn:hover {
   transform: translateY(-1px);
+  opacity: 0.95;
 }
 
 .restartBtn:active {
   transform: translateY(0px);
-  opacity: 0.92;
+  opacity: 0.9;
 }
-

@@ -21,6 +21,8 @@ export default function Game() {
     return { src: oIcon };
   };
 
+  const playerLabel = (mark) => (mark === "X" ? "Player 1" : "Player 2");
+
   const handlePlay = (index) => {
     if (isLocked) return;
     if (cells[index]) return;
@@ -45,15 +47,15 @@ export default function Game() {
       <div className="statusCard" aria-live="polite">
         {!isLocked ? (
           <div className="statusRow">
-            <span className="label">Next</span>
-            <img className="statusIcon" src={currentAsset.src} alt="Next mark" />
+            <span className="label">{playerLabel(next)}</span>
+            <img className="statusIcon" src={currentAsset.src} alt="Next player mark" />
           </div>
         ) : (
           <div className="endState">
             {outcome.winner ? (
               <div className="endRow">
-                <span className="label">Winner</span>
-                <img className="statusIcon" src={winnerAsset.src} alt="Winner mark" />
+                <span className="label">{playerLabel(outcome.winner)} wins</span>
+                <img className="statusIcon" src={winnerAsset.src} alt="Winner player mark" />
               </div>
             ) : (
               <div className="endRow">
